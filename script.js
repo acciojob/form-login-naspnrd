@@ -1,13 +1,11 @@
 function getFormvalue(){
-	// const fName = document.getElementById("fname");
-	// const lName = document.getElementById("lname");
-	// alert(fName.value +" "+ lName.value );
+	event.preventDefault();
+	let fName = document.getElementById("fname").value.trim();
+	let lName = document.getElementById("lname").value.trim();
 
-	//
-	const val = document.querySelectorAll('input');
-	let fName = val[0].value;
-	let lName = val[1].value;
-	alert(fName + " " + lName);
-	
-	
+	if(fName === "" || lName === ""){
+		alert("Please enter both first and last name.")
+		return;
+	}
+	alert(fName + " " + lName)
 }
